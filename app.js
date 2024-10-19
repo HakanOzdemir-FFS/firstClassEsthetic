@@ -4,18 +4,29 @@ function setupSlider(sliderId, foregroundClass, buttonClass) {
   slider.addEventListener("input", function (e) {
     const sliderPos = e.target.value;
 
+    // Foreground div genişliğini ayarla
     document.querySelector(`.${foregroundClass}`).style.width = `${sliderPos}%`;
 
+    // Slider butonunu konumlandır
     const sliderButton = document.querySelector(`.${buttonClass}`);
     sliderButton.style.left = `calc(${sliderPos}% - ${
       sliderButton.offsetWidth / 2
     }px)`;
   });
+
+  // İlk yükleme sırasında butonun başlangıç konumunu ayarla
+  const initialPos = slider.value; // Başlangıç değeri
+  const sliderButton = document.querySelector(`.${buttonClass}`);
+  sliderButton.style.left = `calc(${initialPos}% - ${
+    sliderButton.offsetWidth / 2
+  }px)`;
 }
 
-setupSlider("slider", "foreground-img", "slider-button");
-setupSlider("slider1", "foreground-img-2", "slider-button-2");
-setupSlider("slider2", "foreground-img-3", "slider-button-3");
+setupSlider("slider1", "foreground-img-1", "slider-button-1");
+setupSlider("slider2", "foreground-img-2", "slider-button-2");
+setupSlider("slider3", "foreground-img-3", "slider-button-3");
+setupSlider("slider4", "foreground-img-4", "slider-button-4");
+
 
 //VIDEOS SECTION
 function playVideo(overlay) {
@@ -61,77 +72,6 @@ function toggleAnswer(id) {
     icon.classList.add("fa-plus");
   }
 }
-
-//KAYAN SLİDER YAPIMI İÇİN
-const slider = document.getElementById("floatingSlider");
-const slides = slider.children;
-const dots = document.querySelectorAll(".dot");
-let index = 0;
-let slideInterval;
-
-// Slider'ı belirli aralıklarla otomatik kaydır
-function startAutoSlide() {
-  slideInterval = setInterval(() => {
-    goToNextSlide();
-  }, 5000); // Her 3 saniyede bir geçiş
-}
-
-function goToNextSlide() {
-  index = (index + 1) % slides.length;
-  updateSliderPosition();
-}
-
-function goToPrevSlide() {
-  index = (index - 1 + slides.length) % slides.length;
-  updateSliderPosition();
-}
-
-function goToSlide(slideIndex) {
-  index = slideIndex;
-  updateSliderPosition();
-}
-
-function updateSliderPosition() {
-  slider.style.transform = `translateX(-${index * 100}%)`;
-  updateDots();
-}
-
-function updateDots() {
-  dots.forEach((dot, dotIndex) => {
-    if (dotIndex === index) {
-      dot.classList.add("bg-gray-800");
-      dot.classList.remove("bg-gray-400");
-    } else {
-      dot.classList.add("bg-gray-400");
-      dot.classList.remove("bg-gray-800");
-    }
-  });
-}
-
-// Butonlara tıklama işlemleri
-document.getElementById("next").addEventListener("click", () => {
-  clearInterval(slideInterval); // Tıklanırsa otomatik kaydırmayı durdur
-  goToNextSlide();
-  startAutoSlide(); // Sonra tekrar başlat
-});
-
-document.getElementById("prev").addEventListener("click", () => {
-  clearInterval(slideInterval); // Tıklanırsa otomatik kaydırmayı durdur
-  goToPrevSlide();
-  startAutoSlide(); // Sonra tekrar başlat
-});
-
-// Gösterge noktalarına tıklama işlemleri
-dots.forEach((dot, dotIndex) => {
-  dot.addEventListener("click", () => {
-    clearInterval(slideInterval); // Tıklanırsa otomatik kaydırmayı durdur
-    goToSlide(dotIndex);
-    // Bu kısımda "startAutoSlide()" fonksiyonu çağrılmayacak
-  });
-});
-
-// Otomatik kaydırmayı başlat
-startAutoSlide();
 
 const commentSlider = document.querySelector(".comment-slider");
 const prev = document.getElementById("prevComment");
@@ -187,3 +127,24 @@ document.querySelectorAll(".contactForm").forEach(function (form) {
     sendEmail(this); // Formun kendisini gönder
   });
 });
+
+const sliderContainer = document.getElementById("slider-container");
+const slides = sliderContainer.children;
+let currentIndex2 = 0;
+
+document.getElementById("nextChange").addEventListener("click", () => {
+  currentIndex2 = (currentIndex2 + 1) % slides.length;
+  updateSlider();
+});
+
+document.getElementById("prevChange").addEventListener("click", () => {
+  currentIndex2 = (currentIndex2 - 1 + slides.length) % slides.length;
+  updateSlider();
+});
+
+function updateSlider() {
+  const slideWidth = slides[0].clientWidth;
+  sliderContainer.style.transform = `translateX(${
+    -currentIndex2 * slideWidth
+  }px)`;
+}

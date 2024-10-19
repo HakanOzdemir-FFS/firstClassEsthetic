@@ -15,13 +15,15 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="index.css" />
     <script src="app.js" defer></script>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
   </head>
   <body class="font-montserrat">
-
     <section
       id="Welcome"
-      class="section-container relative w-full min-h-96 max-h-screen rounded-lg shadow-lg flex bg-no-repeat bg-contain  bg-top"
+      class="section-container relative w-full min-h-96 max-h-screen rounded-lg shadow-lg flex bg-no-repeat bg-contain bg-top"
       style="background-image: url('img/Slider3-compressor 2.png')"
     >
       <div class="relative z-10 w-full ml-[5%] flex flex-col">
@@ -314,10 +316,11 @@
           class="relative w-96 h-96 border-2 border-white rounded-lg self-center mx-auto"
         >
           <div
-            class="absolute top-0 left-0 w-96 h-96 bg-no-repeat bg-cover bg-[url('/img/Rectangle_341.png')] background-img rounded-lg"
+            class="absolute top-0 left-0 w-96 h-96 bg-no-repeat bg-[url('/img/Rectangle_341.png')] background-img bg-cover rounded-lg"
           ></div>
           <div
-            class="absolute top-0 left-0 w-96 h-96 bg-no-repeat bg-cover bg-[url('/img/Rectangle_341-GRI.png')] foreground-img rounded-lg"
+            class="absolute top-0 left-0 w-96 h-96 bg-no-repeat bg-cover bg-[url('/img/Rectangle_341-GRI.png')] foreground-img-1 rounded-lg"
+            style="width: 50%"
           ></div>
           <input
             type="range"
@@ -325,10 +328,10 @@
             max="100"
             value="50"
             class="absolute w-full h-full slider"
-            id="slider"
+            id="slider1"
           />
           <div
-            class="absolute w-[8%] h-[8%] rounded-full bg-white left-[46%] top-1/2 transform flex justify-center items-center slider-button"
+            class="absolute w-[8%] h-[8%] rounded-full bg-white left-[46%] top-1/2 transform flex justify-center items-center slider-button slider-button-1"
           >
             <div class="slider-icon"></div>
           </div>
@@ -423,222 +426,142 @@
       </div>
     </section>
 
-    <section id="#changes" class="section-container">
+    <section id="#changes" class="section-container overflow-hidden">
       <div>
         <h2 class="text-4xl text-center md:text-left font-bold mb-5">
-          Muhteşem <br class="md:hidden"/>
+          Muhteşem <br class="md:hidden" />
           Değişimlerimiz
         </h2>
-
-        <div class="relative w-full max-w-2xl mx-auto">
-          <div
-            id="floatingSlider"
-            class="mx-5 flex transition-transform duration-500 ease-in-out"
+        <div class="">
+          <!-- <div
+            class="relative w-96 h-96 border-2 border-white rounded-lg self-center mx-auto"
           >
             <div
-              class="relative w-full flex-shrink-0 border-2 border-white rounded-lg overflow-hidden"
-            >
-              <div
-                class="absolute top-0 left-0 w-80 h-80 bg-no-repeat bg-cover bg-[url('/img/Rectangle_341.png')] background-img-2 rounded-lg"
-              ></div>
-              <div
-                class="absolute top-0 left-0 w-80 h-80 bg-no-repeat bg-cover bg-[url('/img/Rectangle_341-GRI.png')] foreground-img-2 rounded-lg"
-              ></div>
-              <input
-                type="range"
-                min="1"
-                max="100"
-                value="50"
-                class="absolute w-full h-full slider"
-                id="slider1"
-              />
-              <div
-                class="absolute w-[8%] h-[8%] rounded-full bg-white left-[46%] top-1/2 transform flex justify-center items-center slider-button-2"
-              >
-                <div class="slider-icon"></div>
-              </div>
-            </div>
+              class="absolute top-0 left-0 w-96 h-96 bg-no-repeat bg-[url('/img/Rectangle_341.png')] background-img bg-cover rounded-lg"
+            ></div>
             <div
-              class="relative w-80 h-64 border-2 flex-shrink-0 border-white rounded-lg overflow-hidden"
-            >
-              <div
-                class="absolute top-0 left-0 w-80 h-80 bg-no-repeat bg-cover bg-[url('/img/renkliTest.jpeg')] background-img-3 rounded-lg"
-              ></div>
-              <div
-                class="absolute top-0 left-0 w-80 h-80 bg-no-repeat bg-cover bg-[url('/img/griTest.jpeg')] foreground-img-3 rounded-lg"
-              ></div>
-              <input
-                type="range"
-                min="1"
-                max="100"
-                value="50"
-                class="absolute top-0 w-80 h-80 slider"
-                id="slider2"
-              />
-              <div
-                class="absolute w-[8%] h-[8%] rounded-full bg-white left-[46%] top-1/2 transform flex justify-center items-center slider-button-3"
-              >
-                <div class="slider-icon"></div>
-              </div>
-            </div>
+              class="absolute top-0 left-0 w-96 h-96 bg-no-repeat bg-cover bg-[url('/img/Rectangle_341-GRI.png')] foreground-img-2 rounded-lg"
+              style="width: 50%"
+            ></div>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="50"
+              class="absolute w-full h-full slider"
+              id="slider2"
+            />
             <div
-              class="relative w-full flex-shrink-0 border-2 border-white rounded-lg overflow-hidden"
+              class="absolute w-[8%] h-[8%] rounded-full bg-white left-[46%] top-1/2 transform flex justify-center items-center slider-button slider-button-2"
             >
-              <div
-                class="absolute top-0 left-0 w-80 h-80 bg-no-repeat bg-cover bg-[url('/img/Rectangle_341.png')] background-img-2 rounded-lg"
-              ></div>
-              <div
-                class="absolute top-0 left-0 w-80 h-80 bg-no-repeat bg-cover bg-[url('/img/Rectangle_341-GRI.png')] foreground-img-2 rounded-lg"
-              ></div>
-              <input
-                type="range"
-                min="1"
-                max="100"
-                value="50"
-                class="absolute w-full h-full slider"
-                id="slider1"
-              />
-              <div
-                class="absolute w-[8%] h-[8%] rounded-full bg-white left-[46%] top-1/2 transform flex justify-center items-center slider-button-2"
-              >
-                <div class="slider-icon"></div>
-              </div>
+              <div class="slider-icon"></div>
             </div>
-            <div
-              class="relative w-80 h-64 border-2 flex-shrink-0 border-white rounded-lg overflow-hidden"
-            >
+          </div> -->
+
+          <div class="relative w-[1920px] max-w-lg ">
+            <div id="slider" class="w-full h-96 rounded-lg relative">
               <div
-                class="absolute top-0 left-0 w-80 h-80 bg-no-repeat bg-cover bg-[url('/img/renkliTest.jpeg')] background-img-3 rounded-lg"
-              ></div>
-              <div
-                class="absolute top-0 left-0 w-80 h-80 bg-no-repeat bg-cover bg-[url('/img/griTest.jpeg')] foreground-img-3 rounded-lg"
-              ></div>
-              <input
-                type="range"
-                min="1"
-                max="100"
-                value="50"
-                class="absolute top-0 w-80 h-80 slider"
-                id="slider2"
-              />
-              <div
-                class="absolute w-[8%] h-[8%] rounded-full bg-white left-[46%] top-1/2 transform flex justify-center items-center slider-button-3"
+                class="flex relative w-[1920px] transition-transform duration-500"
+                id="slider-container"
               >
-                <div class="slider-icon"></div>
-              </div>
-            </div>
-            <div
-              class="relative w-full flex-shrink-0 border-2 border-white rounded-lg overflow-hidden"
-            >
-              <div
-                class="absolute top-0 left-0 w-80 h-80 bg-no-repeat bg-cover bg-[url('/img/Rectangle_341.png')] background-img-2 rounded-lg"
-              ></div>
-              <div
-                class="absolute top-0 left-0 w-80 h-80 bg-no-repeat bg-cover bg-[url('/img/Rectangle_341-GRI.png')] foreground-img-2 rounded-lg"
-              ></div>
-              <input
-                type="range"
-                min="1"
-                max="100"
-                value="50"
-                class="absolute w-full h-full slider"
-                id="slider1"
-              />
-              <div
-                class="absolute w-[8%] h-[8%] rounded-full bg-white left-[46%] top-1/2 transform flex justify-center items-center slider-button-2"
-              >
-                <div class="slider-icon"></div>
-              </div>
-            </div>
-            <div
-              class="relative w-80 h-64 border-2 flex-shrink-0 border-white rounded-lg overflow-hidden"
-            >
-              <div
-                class="absolute top-0 left-0 w-80 h-80 bg-no-repeat bg-cover bg-[url('/img/renkliTest.jpeg')] background-img-3 rounded-lg"
-              ></div>
-              <div
-                class="absolute top-0 left-0 w-80 h-80 bg-no-repeat bg-cover bg-[url('/img/griTest.jpeg')] foreground-img-3 rounded-lg"
-              ></div>
-              <input
-                type="range"
-                min="1"
-                max="100"
-                value="50"
-                class="absolute top-0 w-80 h-80 slider"
-                id="slider2"
-              />
-              <div
-                class="absolute w-[8%] h-[8%] rounded-full bg-white left-[46%] top-1/2 transform flex justify-center items-center slider-button-3"
-              >
-                <div class="slider-icon"></div>
-              </div>
-            </div>
-            <div
-              class="relative w-80 h-64 border-2 flex-shrink-0 border-white rounded-lg overflow-hidden"
-            >
-              <div
-                class="absolute top-0 left-0 w-80 h-80 bg-no-repeat bg-cover bg-[url('/img/renkliTest.jpeg')] background-img-3 rounded-lg"
-              ></div>
-              <div
-                class="absolute top-0 left-0 w-80 h-80 bg-no-repeat bg-cover bg-[url('/img/griTest.jpeg')] foreground-img-3 rounded-lg"
-              ></div>
-              <input
-                type="range"
-                min="1"
-                max="100"
-                value="50"
-                class="absolute top-0 w-80 h-80 slider"
-                id="slider2"
-              />
-              <div
-                class="absolute w-[8%] h-[8%] rounded-full bg-white left-[46%] top-1/2 transform flex justify-center items-center slider-button-3"
-              >
-                <div class="slider-icon"></div>
+                <div
+                  class="relative w-96 h-96 border-2 border-white rounded-lg self-center mx-auto"
+                >
+                  <div
+                    class="absolute top-0 left-0 w-96 h-96 bg-no-repeat bg-[url('/img/Rectangle_341.png')] background-img bg-cover rounded-lg"
+                  ></div>
+                  <div
+                    class="absolute top-0 left-0 w-96 h-96 bg-no-repeat bg-cover bg-[url('/img/Rectangle_341-GRI.png')] foreground-img-2 rounded-lg"
+                    style="width: 50%"
+                  ></div>
+                  <input
+                    type="range"
+                    min="1"
+                    max="100"
+                    value="50"
+                    class="absolute w-full h-full slider"
+                    id="slider2"
+                  />
+                  <div
+                    class="absolute w-[8%] h-[8%] rounded-full bg-white left-[46%] top-1/2 transform flex justify-center items-center slider-button slider-button-2"
+                  >
+                    <div class="slider-icon"></div>
+                  </div>
+                </div>
+                <div
+                  class="relative w-96 h-96 border-2 border-white rounded-lg self-center mx-auto"
+                >
+                  <div
+                    class="absolute top-0 left-0 w-96 h-96 bg-no-repeat bg-[url('/img/Rectangle_341.png')] background-img bg-cover rounded-lg"
+                  ></div>
+                  <div
+                    class="absolute top-0 left-0 w-96 h-96 bg-no-repeat bg-cover bg-[url('/img/Rectangle_341-GRI.png')] foreground-img-3 rounded-lg"
+                    style="width: 50%"
+                  ></div>
+                  <input
+                    type="range"
+                    min="1"
+                    max="100"
+                    value="50"
+                    class="absolute w-full h-full slider"
+                    id="slider3"
+                  />
+                  <div
+                    class="absolute w-[8%] h-[8%] rounded-full bg-white left-[46%] top-1/2 transform flex justify-center items-center slider-button slider-button-3"
+                  >
+                    <div class="slider-icon"></div>
+                  </div>
+                </div>
+                <div
+                  class="relative w-96 h-96 border-2 border-white rounded-lg self-center mx-auto"
+                >
+                  <div
+                    class="absolute top-0 left-0 w-96 h-96 bg-no-repeat bg-[url('/img/Rectangle_341.png')] background-img bg-cover rounded-lg"
+                  ></div>
+                  <div
+                    class="absolute top-0 left-0 w-96 h-96 bg-no-repeat bg-cover bg-[url('/img/Rectangle_341-GRI.png')] foreground-img-4 rounded-lg"
+                    style="width: 50%"
+                  ></div>
+                  <input
+                    type="range"
+                    min="1"
+                    max="100"
+                    value="50"
+                    class="absolute w-full h-full slider"
+                    id="slider4"
+                  />
+                  <div
+                    class="absolute w-[8%] h-[8%] rounded-full bg-white left-[46%] top-1/2 transform flex justify-center items-center slider-button slider-button-4"
+                  >
+                    <div class="slider-icon"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="relative -bottom-24 pb-24 flex justify-center space-x-10">
           <button
-            id="prev"
-            class="absolute -left-5 top-1/2 transform -translate-y-1/2 bg-yellow-500 text-white px-4 py-2 rounded-full"
+            id="prevChange"
+            class="transform -translate-y-1/2 bg-yellow-500 text-white text-3xl p-2 rounded-full w-12 h-12"
           >
-            <i class="fa-solid fa-chevron-left"></i>
+            <i class="fa-solid fa-angle-left"></i>
           </button>
           <button
-            id="next"
-            class="absolute -right-5 top-1/2 transform -translate-y-1/2 bg-yellow-500 text-white px-4 py-2 rounded-full"
+            id="nextChange"
+            class="transform -translate-y-1/2 bg-yellow-500 text-white text-3xl p-2 rounded-full w-12 h-12"
           >
             <i class="fa-solid fa-chevron-right"></i>
           </button>
-          <div id="indicator" class="flex justify-center mt-4 space-x-2">
-            <span
-              class="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer"
-            ></span>
-            <span
-              class="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer"
-            ></span>
-            <span
-              class="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer"
-            ></span>
-            <span
-              class="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer"
-            ></span>
-            <span
-              class="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer"
-            ></span>
-            <span
-              class="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer"
-            ></span>
-            <span
-              class="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer"
-            ></span>
-          </div>
         </div>
       </div>
     </section>
 
     <section id="#videos" class="section-container">
       <div>
-        <h2 class="text-4xl text-center md:text-left font-bold mb-5">Videolarımız</h2>
+        <h2 class="text-4xl text-center md:text-left font-bold mb-5">
+          Videolarımız
+        </h2>
       </div>
       <div class="max-w-full h-auto mx-auto p-4">
         <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4">
@@ -770,7 +693,10 @@
       </div>
     </section>
 
-    <section id="#comments" class="section-container bg-gray-100 pb-5">
+    <section
+      id="#comments"
+      class="section-container overflow-hidden bg-gray-100 pb-5"
+    >
       <h2 class="font-bold text-3xl text-center pt-5">
         MÜŞTERİLERİMİZ <br />
         <span class="text-yellow-500">FIRST CLASS ESTHETIC</span> İÇİN
@@ -781,65 +707,97 @@
         lorem, laoreet sit amet consequat eu, accumsan vitae ligula.
         Pellentesque gravida ipsum et volutpat tincidunt.
       </p>
-    
+
       <div class="flex justify-center">
-        <div
-          class="slider-wrapper  w-[90%] relative"
-        >
-        <div class="comment-slider flex flex-col mt-10 space-y-10 md:grid md:grid-cols-2 md:gap-y-12 md:space-y-0 lg:flex lg:flex-row lg:gap-y-0 lg:flex-nowrap transition-transform duration-500 gap-4 ">
-            <div class="bg-white rounded-lg flex flex-col items-center pt-14 mx-2 relative comment w-full lg:w-auto">
+        <div class="slider-wrapper w-[90%] relative">
+          <div
+            class="comment-slider flex flex-col mt-10 space-y-10 md:grid md:grid-cols-2 md:gap-y-12 md:space-y-0 lg:flex lg:flex-row lg:gap-y-0 lg:flex-nowrap transition-transform duration-500 gap-4"
+          >
+            <div
+              class="bg-white rounded-lg flex flex-col items-center pt-14 mx-2 relative comment w-full lg:w-auto"
+            >
               <span class="font-bold text-gray-600">Ad SOYAD</span>
               <span class="text-gray-600">Unvan</span>
               <span class="text-yellow-500 text-3xl">★★★★★</span>
               <p class="text-center p-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <img class="absolute -top-10 w-24 h-24 border-2 border-yellow-500 rounded-full" src="img/user.png" alt="user" />
+              <img
+                class="absolute -top-10 w-24 h-24 border-2 border-yellow-500 rounded-full"
+                src="img/user.png"
+                alt="user"
+              />
             </div>
-    
-            <div class="bg-white rounded-lg flex flex-col items-center pt-14 mx-2 relative comment w-full lg:w-auto">
+
+            <div
+              class="bg-white rounded-lg flex flex-col items-center pt-14 mx-2 relative comment w-full lg:w-auto"
+            >
               <span class="font-bold text-gray-600">Ad SOYAD</span>
               <span class="text-gray-600">Unvan</span>
               <span class="text-yellow-500 text-3xl">★★★★★</span>
               <p class="text-center p-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <img class="absolute -top-10 w-24 h-24 border-2 border-yellow-500 rounded-full" src="img/user.png" alt="user" />
+              <img
+                class="absolute -top-10 w-24 h-24 border-2 border-yellow-500 rounded-full"
+                src="img/user.png"
+                alt="user"
+              />
             </div>
-    
-            <div class="bg-white rounded-lg flex flex-col items-center pt-14 mx-2 relative comment w-full lg:w-auto">
+
+            <div
+              class="bg-white rounded-lg flex flex-col items-center pt-14 mx-2 relative comment w-full lg:w-auto"
+            >
               <span class="font-bold text-gray-600">Ad SOYAD</span>
               <span class="text-gray-600">Unvan</span>
               <span class="text-yellow-500 text-3xl">★★★★★</span>
               <p class="text-center p-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <img class="absolute -top-10 w-24 h-24 border-2 border-yellow-500 rounded-full" src="img/user.png" alt="user" />
+              <img
+                class="absolute -top-10 w-24 h-24 border-2 border-yellow-500 rounded-full"
+                src="img/user.png"
+                alt="user"
+              />
             </div>
-    
-            <div class="bg-white rounded-lg flex flex-col items-center pt-14 mx-2 relative comment w-full lg:w-auto">
+
+            <div
+              class="bg-white rounded-lg flex flex-col items-center pt-14 mx-2 relative comment w-full lg:w-auto"
+            >
               <span class="font-bold text-gray-600">Ad SOYAD</span>
               <span class="text-gray-600">Unvan</span>
               <span class="text-yellow-500 text-3xl">★★★★★</span>
               <p class="text-center p-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <img class="absolute -top-10 w-24 h-24 border-2 border-yellow-500 rounded-full" src="img/user.png" alt="user" />
+              <img
+                class="absolute -top-10 w-24 h-24 border-2 border-yellow-500 rounded-full"
+                src="img/user.png"
+                alt="user"
+              />
             </div>
-            
           </div>
-          
-    
-          <div class="absolute -right-5 top-1/2 transform -translate-y-1/2 hidden lg:flex">
-            <i class="fa-solid fa-angle-right text-2xl bg-slate-50 w-12 h-12 rounded-full flex items-center justify-center shadow-md cursor-pointer hover:bg-yellow-500 hover:text-white" id="nextComment"></i>
+
+          <div
+            class="absolute -right-5 top-1/2 transform -translate-y-1/2 hidden lg:flex"
+          >
+            <i
+              class="fa-solid fa-angle-right text-2xl bg-slate-50 w-12 h-12 rounded-full flex items-center justify-center shadow-md cursor-pointer hover:bg-yellow-500 hover:text-white"
+              id="nextComment"
+            ></i>
           </div>
-          <div class="absolute -left-5 top-1/2 transform -translate-y-1/2 hidden lg:flex">
-            <i class="fa-solid fa-angle-left text-2xl bg-slate-50 w-12 h-12 rounded-full flex items-center justify-center shadow-md cursor-pointer hover:bg-yellow-500 hover:text-white" id="prevComment"></i>
+          <div
+            class="absolute -left-5 top-1/2 transform -translate-y-1/2 hidden lg:flex"
+          >
+            <i
+              class="fa-solid fa-angle-left text-2xl bg-slate-50 w-12 h-12 rounded-full flex items-center justify-center shadow-md cursor-pointer hover:bg-yellow-500 hover:text-white"
+              id="prevComment"
+            ></i>
           </div>
         </div>
       </div>
     </section>
-    
+
     <section id="#ourPackage" class="section-container">
       <h2 class="text-4xl font-bold text-center mb-10">Paketlerimiz</h2>
       <div
@@ -1160,7 +1118,9 @@
     <section id="#gallery" class="section-container">
       <h2 class="text-4xl font-bold text-center my-5">GALERİ</h2>
       <div class="grid space-y-4">
-        <div class="grid space-y-4 md:space-y-0 grid-cols-1 gap-4 md:grid-cols-2 space-x-4">
+        <div
+          class="grid space-y-4 md:space-y-0 grid-cols-1 gap-4 md:grid-cols-2 space-x-4"
+        >
           <div class="relative h-96">
             <img
               class="w-full h-full object-cover float-left rounded-lg"
@@ -1428,13 +1388,25 @@
         <div class="m-5">
           <h5 class="font-bold">Sosyal Medya Hesaplarımız</h5>
           <div class="flex">
-            <a class="cursor-pointer" href="https://www.facebook.com" target="_blank">
+            <a
+              class="cursor-pointer"
+              href="https://www.facebook.com"
+              target="_blank"
+            >
               <img src="img/facebook.svg" alt="facebook" />
             </a>
-            <a class="cursor-pointer" href="https://www.instagram.com" target="_blank">
+            <a
+              class="cursor-pointer"
+              href="https://www.instagram.com"
+              target="_blank"
+            >
               <img src="img/instagram.svg" alt="instagram.svg" />
             </a>
-            <a class="cursor-pointer" href="https://www.youtube.com" target="_blank">
+            <a
+              class="cursor-pointer"
+              href="https://www.youtube.com"
+              target="_blank"
+            >
               <img src="img/youtube.svg" alt="youtube" />
             </a>
           </div>
