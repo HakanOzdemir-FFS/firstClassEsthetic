@@ -77,7 +77,7 @@ const commentSlider = document.querySelector(".comment-slider");
 const prev = document.getElementById("prevComment");
 const next = document.getElementById("nextComment");
 const totalItems = commentSlider.children.length;
-const itemsPerSlide = 3; // Bir slaytta gösterilecek yorum sayısı
+const itemsPerSlide = 1; // Bir slaytta gösterilecek yorum sayısı
 let currentIndex = 0;
 
 // Sağ ok tıklaması
