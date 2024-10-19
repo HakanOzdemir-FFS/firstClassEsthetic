@@ -67,6 +67,10 @@ body {
   cursor: pointer;
 }
 
+.slider-button{
+  pointer-events: none;
+}
+
 .slider-button:after, .slider-button:before {
   content: "";
   padding: 0.2rem;
