@@ -32,9 +32,7 @@ setupSlider("slider4", "foreground-img-4", "slider-button-4");
 function openModal(videoId, title) {
   const modal = document.getElementById('videoModal');
   const iframe = document.getElementById('modalVideo');
-  const modalTitle = document.getElementById('modalTitle');
   
-  modalTitle.innerText = title;
   iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1`;
   modal.classList.remove('hidden');
 }

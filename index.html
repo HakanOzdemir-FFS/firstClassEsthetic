@@ -605,13 +605,10 @@
     
       <!-- Modal -->
       <div id="videoModal" class="fixed inset-0 bg-gray-600 bg-opacity-75  flex items-center justify-center hidden" onclick="closeModalOnOutsideClick(event)">
-        <div class="relative bg-white rounded-lg overflow-hidden w-full max-w-4xl" onclick="event.stopPropagation()">
+        <div class="relative rounded-lg overflow-hidden w-full max-w-4xl" onclick="event.stopPropagation()">
           <button class="absolute top-2 right-2 text-5xl text-white" onclick="closeModal()">&times;</button>
           <div class="aspect-w-16 aspect-h-9">
             <iframe id="modalVideo" class="w-96 h-96 md:w-full" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="p-4">
-            <h3 id="modalTitle" class="text-xl font-bold">Video Başlığı</h3>
           </div>
         </div>
       </div>
