@@ -29,32 +29,32 @@ setupSlider("slider4", "foreground-img-4", "slider-button-4");
 
 
 //VIDEOS SECTION
-function playVideo(overlay) {
-  overlay.style.display = "none";
-
-  const iframe = overlay.previousElementSibling;
-  const video = iframe.contentWindow;
-  video.postMessage('{"event":"command","func":"playVideo","args":""}', "*");
+function openModal(videoId, title) {
+  const modal = document.getElementById('videoModal');
+  const iframe = document.getElementById('modalVideo');
+  const modalTitle = document.getElementById('modalTitle');
+  
+  modalTitle.innerText = title;
+  iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1`;
+  modal.classList.remove('hidden');
 }
 
-//PACKAGE SECTION
-const hoverDivs = document.querySelectorAll(".hoverDiv");
+function closeModal() {
+  const modal = document.getElementById('videoModal');
+  const iframe = document.getElementById('modalVideo');
+  
+  iframe.src = ''; // Videoyu durdurmak için src'yi temizliyoruz
+  modal.classList.add('hidden');
+}
 
-hoverDivs.forEach((hoverDiv) => {
-  const tikImages = hoverDiv.querySelectorAll(".tikHoverGold");
+function closeModalOnOutsideClick(event) {
+  const modal = document.getElementById('videoModal');
+  if (event.target === modal) {
+    closeModal();
+  }
+}
 
-  hoverDiv.addEventListener("mouseover", function () {
-    tikImages.forEach((img) => {
-      img.src = "img/tikGold.svg";
-    });
-  });
 
-  hoverDiv.addEventListener("mouseout", function () {
-    tikImages.forEach((img) => {
-      img.src = "img/tikGray.svg";
-    });
-  });
-});
 
 //SSS İÇİN
 function toggleAnswer(id) {
