@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.section-container{
+  max-width: 1920px;
+  height: auto;
+  margin: 20px auto 20px;
+  overflow: hidden;
+}
+
+.section-container-big{
+  max-width: 1920px;
+  min-height: 800px;
+  height: auto;
+  margin: 20px auto 20px;
+  overflow: hidden;
+}
+
+
+.section-container:first-of-type {
+  margin: 0 auto 20px; 
+}
+
+@keyframes rotate-background {
+  from {
+      background-position: 0% 50%;
+  }
+  to {
+      background-position: 100% 50%;
+  }
+}
+
+.bg-rotate {
+  animation: rotate-background 3s alternate infinite;
+  background-size: 200% 200%;
+  background-image: radial-gradient(circle, #DEBB00, #B39700);
+}
+
+#Welcome{
+  background-color: #EDEDEF;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(242, 242, 242, 0.3);
+  outline: none;
+  margin: 0;
+  transition: background 0.2s;
+}
+
+.slider:hover {
+  background: rgba(242, 242, 242, 0.1);
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0.5rem;
+  height: 24rem;
+  background: white;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 0.5rem;
+  height: 24rem; 
+  background: white;
+  cursor: pointer;
+}
+
+.slider-button:after, .slider-button:before {
+  content: "";
+  padding: 0.2rem;
+  display: inline-block;
+  border: solid #5D5D5D;
+  border-width: 0 2px 2px 0;
+}
+
+.slider-button:after {
+  transform: rotate(-45deg);
+}
+
+.slider-button:before {
+  transform: rotate(135deg);
+}
+
+
+/*Slider Comment*/
+.comment-slider-wrapper {
+  margin-top: 4rem;
+  position: relative;
+}
+
+.comment-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.comment {
+  min-width: calc(100% / 3); /* Her bir yorum genişliği, container'ın 1/3'ü */
+}
