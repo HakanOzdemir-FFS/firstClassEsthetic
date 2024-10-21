@@ -105,7 +105,7 @@ prev.addEventListener("click", () => {
 });
 
 (function () {
-  emailjs.init("***"); // EmailJS kullanıcı ID'nizi buraya ekleyin
+  emailjs.init("8iPf92I1ZRlPE43yY"); // EmailJS kullanıcı ID'nizi buraya ekleyin
 })();
 
 function sendEmail(form) {
@@ -122,7 +122,7 @@ function sendEmail(form) {
   }
 
   // Eğer tüm alanlar doluysa email gönderme işlemi başlar
-  emailjs.sendForm("service_t211o8k", "template_p66bctd", form).then(
+  emailjs.sendForm("service_6obtnl9", "template_h6mv3u5", form).then(
     function () {
       alert("Mesajınız gönderildi!");
     },
@@ -167,3 +167,17 @@ function updateSlider() {
   }px)`;
 }
 
+firstclassestheticofficial@gmail.com.
+firstCLassOfficial
+
+Hello First Class Esthetic,
+
+Websitenizden sizlere bir form gönderildi:
+
+İsim: {{name}}
+Soyisim: {{surname}}
+E-mail: {{email}}
+Cep Telefonu: {{cellPhone}}
+Mesaj:{{message}}
+
+Best wishes,
