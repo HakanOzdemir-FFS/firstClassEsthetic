@@ -166,18 +166,3 @@ function updateSlider() {
     -currentIndex2 * totalSlideWidth - 40
   }px)`;
 }
-
-firstclassestheticofficial@gmail.com.
-firstCLassOfficial
-
-Hello First Class Esthetic,
-
-Websitenizden sizlere bir form gönderildi:
-
-İsim: {{name}}
-Soyisim: {{surname}}
-E-mail: {{email}}
-Cep Telefonu: {{cellPhone}}
-Mesaj:{{message}}
-
-Best wishes,
