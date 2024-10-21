@@ -19,18 +19,27 @@ body {
 }
 
 @keyframes rotate-background {
-  from {
-    background-position: 0% 50%;
+  0% {
+    background-position: top left;
   }
-  to {
-    background-position: 100% 50%;
+  25% {
+    background-position: top right;
+  }
+  50% {
+    background-position: bottom right;
+  }
+  75% {
+    background-position: bottom left;
+  }
+  100% {
+    background-position: top left;
   }
 }
 
 .bg-rotate {
-  animation: rotate-background 3s alternate infinite;
+  animation: rotate-background 6s linear  infinite;
   background-size: 200% 200%;
-  background-image: radial-gradient(circle, #debb00, #b39700);
+  background-image: radial-gradient(circle, #ededef, #b39700);
 }
 
 #Welcome {
@@ -99,5 +108,5 @@ body {
 }
 
 .comment {
-  min-width: calc(100% / 3);
+  min-width: calc(100% / 1);
 }

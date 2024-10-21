@@ -27,32 +27,34 @@ setupSlider("slider2", "foreground-img-2", "slider-button-2");
 setupSlider("slider3", "foreground-img-3", "slider-button-3");
 setupSlider("slider4", "foreground-img-4", "slider-button-4");
 
-
 //VIDEOS SECTION
 function openModal(videoId, title) {
-  const modal = document.getElementById('videoModal');
-  const iframe = document.getElementById('modalVideo');
-  
+  const modal = document.getElementById("videoModal");
+  const iframe = document.getElementById("modalVideo");
+
   iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1`;
-  modal.classList.remove('hidden');
+  console.log(iframe);
+  iframe.classList.remove("w-full");
+  iframe.classList.add("w-screen");
+  console.log(iframe);
+
+  modal.classList.remove("hidden");
 }
 
 function closeModal() {
-  const modal = document.getElementById('videoModal');
-  const iframe = document.getElementById('modalVideo');
-  
-  iframe.src = ''; // Videoyu durdurmak için src'yi temizliyoruz
-  modal.classList.add('hidden');
+  const modal = document.getElementById("videoModal");
+  const iframe = document.getElementById("modalVideo");
+
+  iframe.src = ""; // Videoyu durdurmak için src'yi temizliyoruz
+  modal.classList.add("hidden");
 }
 
 function closeModalOnOutsideClick(event) {
-  const modal = document.getElementById('videoModal');
+  const modal = document.getElementById("videoModal");
   if (event.target === modal) {
     closeModal();
   }
 }
-
-
 
 //SSS İÇİN
 function toggleAnswer(id) {
@@ -75,15 +77,15 @@ const commentSlider = document.querySelector(".comment-slider");
 const prev = document.getElementById("prevComment");
 const next = document.getElementById("nextComment");
 const totalItems = commentSlider.children.length;
-const itemsPerSlide = 1; // Bir slaytta gösterilecek yorum sayısı
+const itemsPerSlide = 1; // Geçişte gösterilecek yorum sayısı
 let currentIndex = 0;
 
 // Sağ ok tıklaması
 next.addEventListener("click", () => {
   if (currentIndex < totalItems - itemsPerSlide) {
-    currentIndex++; // Sadece 1 yorum kayacak
+    currentIndex++;
   } else {
-    currentIndex = 0; // Sonraki kaydırmada başa döner
+    currentIndex = 0;
   }
   commentSlider.style.transform = `translateX(-${
     (currentIndex * 100) / itemsPerSlide
@@ -93,22 +95,33 @@ next.addEventListener("click", () => {
 // Sol ok tıklaması
 prev.addEventListener("click", () => {
   if (currentIndex > 0) {
-    currentIndex--; // Sadece 1 yorum kayacak
+    currentIndex--;
   } else {
-    currentIndex = totalItems - itemsPerSlide; // Başa geldiğinde son gruba döner
+    currentIndex = totalItems - itemsPerSlide;
   }
   commentSlider.style.transform = `translateX(-${
-    (currentIndex * 100) / itemsPerSlide
+    (currentIndex * 110) / itemsPerSlide
   }%)`;
 });
 
 (function () {
-  emailjs.init("8vULoMrf8RU4Dag1K"); // EmailJS kullanıcı ID'nizi buraya ekleyin
+  emailjs.init("***"); // EmailJS kullanıcı ID'nizi buraya ekleyin
 })();
 
 function sendEmail(form) {
   event.preventDefault(); // Varsayılan form gönderimini engelle
 
+  // Formda boş alan olup olmadığını kontrol eden kısım
+  let inputs = form.querySelectorAll("input, textarea, select"); // Formdaki tüm input, textarea ve select elementleri alınıyor
+  for (let input of inputs) {
+    if (input.value.trim() === "") {
+      // Eğer alan boşsa
+      alert("Lütfen tüm alanları doldurun.");
+      return; // Fonksiyonu durdur ve formu gönderme
+    }
+  }
+
+  // Eğer tüm alanlar doluysa email gönderme işlemi başlar
   emailjs.sendForm("service_t211o8k", "template_p66bctd", form).then(
     function () {
       alert("Mesajınız gönderildi!");
@@ -141,8 +154,16 @@ document.getElementById("prevChange").addEventListener("click", () => {
 });
 
 function updateSlider() {
-  const slideWidth = slides[0].clientWidth;
+  const slide = slides[0]; // İlk slaytı al
+  const slideWidth = slide.offsetWidth; // Genişlik (padding + border dahil)
+  const marginRight = parseInt(window.getComputedStyle(slide).marginRight); // Sağ margin değerini al
+
+  // Toplam genişlik: slayt genişliği + sağ margin
+  const totalSlideWidth = slideWidth + marginRight;
+
+  // Slider'ı kaydır
   sliderContainer.style.transform = `translateX(${
-    -currentIndex2 * slideWidth
+    -currentIndex2 * totalSlideWidth - 40
   }px)`;
 }
+
