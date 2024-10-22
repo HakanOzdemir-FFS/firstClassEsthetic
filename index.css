@@ -63,9 +63,14 @@ body {
   -webkit-appearance: none;
   appearance: none;
   width: 0.5rem;
-  height: 24rem;
+  height: 20rem;
   background: white;
   cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .slider::-webkit-slider-thumb {
+    height: 24rem; /* 1024px üzeri ekranlar için 24rem */
+  }
 }
 
 .slider::-moz-range-thumb {

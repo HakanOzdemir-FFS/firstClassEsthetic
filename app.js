@@ -26,6 +26,8 @@ setupSlider("slider1", "foreground-img-1", "slider-button-1");
 setupSlider("slider2", "foreground-img-2", "slider-button-2");
 setupSlider("slider3", "foreground-img-3", "slider-button-3");
 setupSlider("slider4", "foreground-img-4", "slider-button-4");
+setupSlider("slider5", "foreground-img-5", "slider-button-5");
+setupSlider("slider6", "foreground-img-6", "slider-button-6");
 
 //VIDEOS SECTION
 function openModal(videoId, title) {
