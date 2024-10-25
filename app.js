@@ -90,7 +90,7 @@ next.addEventListener("click", () => {
     currentIndex = 0;
   }
   commentSlider.style.transform = `translateX(-${
-    (currentIndex * 100) / itemsPerSlide
+    (currentIndex * 105) / itemsPerSlide
   }%)`;
 });
 
@@ -157,14 +157,11 @@ document.getElementById("prevChange").addEventListener("click", () => {
 
 function updateSlider() {
   const slide = slides[0]; // İlk slaytı al
-  const slideWidth = slide.offsetWidth; // Genişlik (padding + border dahil)
-  const marginRight = parseInt(window.getComputedStyle(slide).marginRight); // Sağ margin değerini al
-
-  // Toplam genişlik: slayt genişliği + sağ margin
-  const totalSlideWidth = slideWidth + marginRight;
+  const slideWidth = slide.offsetWidth; // Slayt genişliği (padding + border dahil)
+  console.log((-currentIndex2 * (slideWidth- 100)))
 
   // Slider'ı kaydır
   sliderContainer.style.transform = `translateX(${
-    -currentIndex2 * totalSlideWidth - 40
+    (-currentIndex2 * (slideWidth + 40)) 
   }px)`;
 }
